@@ -4,6 +4,8 @@
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>AudioMotion-analyzer</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script rel="preload" src="main.js" type="module"></script>
 </head>
 
 <style>
@@ -28,8 +30,7 @@
 
 <body>
 	<div id="animation-audio"></div>
-    <audio id="audio-sound" src="https://casthttps1.suaradionanet.net/13280/stream" controls crossorigin="anonymous"></audio>
-
-    <script src="main.js" type="module"></script>
+    <audio id="audio-sound" src="https://casthttps1.suaradionanet.net/13280/stream" crossorigin="anonymous"></audio>
+    <button class="play" style="display:flex; margin: 0 auto;">Play</button>
 </body>
 </html>
