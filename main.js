@@ -1,4 +1,4 @@
-import AudioMotionAnalyzer from './audiomotion-analyzer.js';
+import AudioMotionAnalyzer from './analyzer.js';
 //teste
 $(document).ready(function () {
     $('.play').on({
