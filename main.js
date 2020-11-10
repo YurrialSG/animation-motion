@@ -1,5 +1,5 @@
 import AudioMotionAnalyzer from './analyzer.js';
-//teste
+
 $(document).ready(function () {
     playAnimation();
 });
@@ -23,16 +23,18 @@ function playAnimation() {
         }
         audioMotion.registerGradient('my-grad', options);
         audioMotion.setOptions({
-            fftSize: 8192, //Frequência
+            fftSize: 16384, //Frequência
             gradient: 'my-grad', //Nome gradiente adicionado anteriormente
-            maxFreq: 22000, //Max Frequência
-            minFreq: 250, //Min Frequência
+            maxFreq: 2000, //Max Frequência
+            minFreq: 20, //Min Frequência
             mode: 5, //Desenho linhas de animação - 0 até 10
             radial: false, //Modo em circulo
             reflexAlpha: 1,
             reflexBright: 1,
-            showBgColor: true, //Exibir cor de fundo
+            reflexRatio: 0, //centralizar animação
+            showBgColor: false, //Exibir cor de fundo
             showScale: false, //Exibir escala a baixo
+            overlay: true //exibir fundo transparente
         });
     }
     catch (err) {
