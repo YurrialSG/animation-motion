@@ -1,17 +1,10 @@
 import AudioMotionAnalyzer from './analyzer.js';
 //teste
 $(document).ready(function () {
-    $('.play').on({
-        click: function () {
-            var audio = document.getElementById("audio-sound");
-            audio.play();
-            console.log("cliquei");
-            playAnimation();
-        },
-      });
+    playAnimation();
 });
 
-function playAnimation () {
+function playAnimation() {
     try {
         var audioMotion = new AudioMotionAnalyzer(
             document.getElementById('animation-audio'),
