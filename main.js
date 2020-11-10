@@ -1,5 +1,5 @@
 import AudioMotionAnalyzer from './audiomotion-analyzer.js';
-
+//teste
 $(document).ready(function () {
     $('.play').on({
         click: function () {
