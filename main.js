@@ -1,16 +1,26 @@
- import AudioMotionAnalyzer from './audiomotion-analyzer.js';
+import AudioMotionAnalyzer from './analyzer.js';
 
 $(document).ready(function () {
+    var audio = document.getElementById("audio-sound");
+    var count = 1;
     $('.play').on({
         click: function () {
-            var audio = document.getElementById("audio-sound");
             audio.play();
-            playAnimation();
+            if(count === 1) {
+                playAnimation();
+                count--;
+            }
         },
-      });
+    });
+
+    $('.stop').on({
+        click: function () {
+            audio.pause();
+        },
+    });
 });
 
-function playAnimation () {
+function playAnimation() {
     try {
         var audioMotion = new AudioMotionAnalyzer(
             document.getElementById('animation-audio'),
